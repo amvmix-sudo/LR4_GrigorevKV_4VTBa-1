@@ -1,10 +1,20 @@
 """
-Основной файл проекта.
-Демонстрирует пример структуры и комментариев в коде.
+Точка входа учебного проекта.
+Файл демонстрирует структуру приложения и работу с модулями.
 """
 
+from users import get_users, create_user
+
+
 def main():
-    print("Учебный проект по GitHub")
+    print("Запуск учебного проекта")
+
+    users = get_users()
+    print("Список пользователей:", users)
+
+    new_user = create_user("user3", "user3@example.com")
+    print("Создан пользователь:", new_user)
+
 
 if __name__ == "__main__":
     main()
